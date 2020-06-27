@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1 align="center">Data Diri</h1>
-	<form>
+	<form method="post" action="FormHasil.php">
 	<table style="border: 1px solid black; " align="center" width="700px">
 			<!-- form nama -->
 			<tr>
@@ -13,7 +13,7 @@
 					<label for="Nama">Nama</label>
 				</td>
 				<td colspan="2">
-					:<input type="text" id="Nama"style="width: 50%">
+					:<input type="text" id="Nama" name="nama" style="width: 50%" required="">
 				</td>
 			</tr>
 			<!-- form Ttl-->
@@ -22,7 +22,7 @@
 					<label for="tempat">Tempat, Tanggal Lahir</label>
 				</td>
 				<td colspan="2">
-					:<input type="text" id="tempat"style="width: 50%">
+					:<input type="text" id="tempat" name="tempat" style="width: 50%" required="">
 				</td>
 			</tr>
 			<!-- form alamat -->
@@ -31,7 +31,7 @@
 					<label>Alamat</label>
 				</td>
 				<td colspan="2">
-					:<input type="text" id="Alamat"style="width: 50%">
+					:<input type="text" id="Alamat" name="alamat" style="width: 50%" required="">
 				</td>
 			</tr>
 			<!-- form telepon -->
@@ -40,7 +40,7 @@
 					<label>Telp</label>
 				</td>
 				<td colspan="2">
-					:<input type="text" id="Telp"style="width: 50%">
+					:<input type="number" id="Telp" name="telp" style="width: 50%" required="">
 				</td>
 			</tr>
 			<!-- form hobi -->
@@ -49,7 +49,7 @@
 					<label>Hobi</label>
 				</td>
 				<td colspan="2">
-					:<input type="text" id="hobi"style="width: 50%">
+					:<input type="text" id="hobi" name="hobi" style="width: 50%" required="">
 				</td>
 			</tr>
 			<!-- jenis kelamin -->
@@ -58,9 +58,9 @@
 					<label>Jenis Kelamin</label>
 				</td>
 				<td >
-					<input type="radio" id="Laki-Laki" name="jenis_kelamin">
+					<input type="radio" id="Laki-Laki" name="jenis" value="Laki-laki" >
 					<label for="Laki-Laki">Laki-Laki</label>
-					<input type="radio" id="Perempuan" name="jenis_kelamin">
+					<input type="radio" id="Perempuan" name="jenis" value="Perempuan"checked="">
 					<label for="Perempuan">Perempuan</label>
 				</td>
 			</tr>
@@ -70,8 +70,7 @@
 					Agama
 				</td>
 				<td colspan="2"><div class="select">
-					<select name="Agama" id="Agama">
-						<option></option>
+					<select name="agama" id="Agama">
 						<option>Islam</option>
 						<option>Kristen</option>
 						<option>Katholik</option>
@@ -88,7 +87,6 @@
 				</td>
 				<td colspan="2"><div class="select">
 					<select name="pendidikan" id="pendidikan">
-						<option></option>
 						<option>SMP</option>
 						<option>SMA</option>
 						<option>S1</option>
@@ -102,12 +100,12 @@
 					Prestasi yang pernah diraih
 				</td>
 				<td colspan="2">
-					<textarea placeholder="Prestasi saya adalah . . ." cols="22" rows="4"></textarea>
+					<textarea placeholder="Prestasi saya adalah . . ." cols="22" rows="4" name="prestasi" required=""></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center" height="50px">
-				<input type="checkbox" name="s&k">Data yang saya masukkan adalah benar adanya</td>
+				<input type="checkbox" name="s&k" required="">Data yang saya masukkan adalah benar adanya</td>
 			</tr>
 			<!-- submit -->
 			<tr>
@@ -120,5 +118,6 @@
 			</tr>
 	</table>
 	</form>
+	
 </body>
 </html>
